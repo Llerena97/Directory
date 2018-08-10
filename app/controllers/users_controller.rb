@@ -47,7 +47,7 @@ class UsersController < ApplicationController
       :state,
       :cellphone,
       :phone,
-      :company
+      :company_id
     )
   end
 

@@ -1,7 +1,8 @@
-<% @users.each do |user| %>
-  <div style="border: black solid;">
+<h1>User List </h1><%= link_to "New User", new_user_path %>
+<% @users.each do |user| %> 
+  <div style="border: black solid; margin-top: 2px; padding: 4px;">
   <h2><%= link_to user.first_name, user %> <%= link_to user.last_name, user %></h2>
-  <h4><%= user.company %></h4>
+  <h4><%= user.company.try(:name) %></h4>
   <h5>Created at: <%= time_ago_in_words(user.created_at) %></h5>
   <h5>Updated at: <%= time_ago_in_words(user.updated_at) %></h5>
   </div>

@@ -9,9 +9,8 @@
   <h4>State*: <%= f.text_field :state %></h4>
   <h4>Cellphone*: <%= f.text_field :cellphone %></h4>
   <h4>Phone: <%= f.text_field :phone %></h4>
-  <h4>Company: <%= f.text_field :company, placeholder: "Ex: Google Inc." %></h4><br>
+  <h4>Company: <%= f.select :company_id, Company.all.collect { |comp| [ comp.name, comp.id ] }, include_blank: true %></h4><br>
   <h4>Email*: <%= f.text_field :email, placeholder: "person@example.com" %></h4>
   <h4>Password*: <%= f.password_field :password, placeholder: "pass" %></h4>
   <%= f.submit  %>
-
 <% end %>

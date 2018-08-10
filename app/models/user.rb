@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :first_name, :last_name, :address, :city, :state, :cellphone, presence: true
+  belongs_to :company, optional: true
 end

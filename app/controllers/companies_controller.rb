@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-  
+ 
   def index
     @companies = Company.all
   end
@@ -32,6 +32,12 @@ class CompaniesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @company = Company.find(params[:id])
+    @company.destroy
+    redirect_to companies_path
   end
 
   private
