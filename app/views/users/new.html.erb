@@ -1,7 +1,9 @@
 <h1>Sign Up</h1>
 
 <%= form_for(@user) do |f| %>
-  
+  <% @user.errors.full_messages.each do |message| %>
+    <div style="background-color: red; color: white;"><%= message %></div>
+  <% end %>
   <h4>First Name*: <%= f.text_field :first_name %></h4>
   <h4>Last Name*: <%= f.text_field :last_name %></h4>
   <h4>Address*: <%= f.text_field :address, placeholder: "Ex: Street 15th" %></h4>
