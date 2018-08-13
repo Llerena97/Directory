@@ -4,5 +4,6 @@
     <h2><%= link_to company.name, company %></h2>
     <h4><%= company.address %></h4>
     <h4><%= company.commercial_activity %></h4>
+    <%= link_to "Delete", company, method: :delete %>
   <% end %>
 </div>
