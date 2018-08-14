@@ -1,3 +1,4 @@
+<center>
 <h2><%= @company.name %></h2>
 <h3><%= @company.address %></h3>
 <h4><%= @company.city %></h4>
@@ -6,3 +7,30 @@
 <h4><%= @company.cellphone %></h4>
 <h4><%= @company.phone %></h4>
 <%= link_to "edit", edit_company_path(@company) %>
+</center>
+<h5>Employees</h5>
+  <table border="1">
+    <tr>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Address</td>
+      <td>Email</td>
+      <td>City</td>
+      <td>State</td>
+      <td>Cellphone</td>
+      <td>Phone</td>
+    </tr>
+    <% @company.users.each do |user| %>
+    <tr>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.address %></td>
+      <td><%= user.email %></td>
+      <td><%= user.city %></td>
+      <td><%= user.state %></td>
+      <td><%= user.cellphone %></td>
+      <td><%= user.phone %></td>
+    </tr>
+    <%end%>
+  </table>
+
