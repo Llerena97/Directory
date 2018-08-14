@@ -8,13 +8,30 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <div style="width: 100%; background-color: red;">
-    <nav>
-      <li><%= link_to "Users", users_path %></li>
-      <li><%= link_to "Companies", companies_path %></li>
-    </nav>
-  </div>
+  <style>
+    body{
+      margin: 0;
+    }
+    li{
+      display: inline-block;
+      padding: 10px;
+    }
+    div{
+      border-radius: 10px;
+      text-align: center;
+      text-decoration: none;
+    }
+    h1{
+      text-align: center;
+    }
+  </style>
   <body>
+    <div style="width: 100%; background-color: red;">
+      <nav>
+        <li><%= link_to "Users", users_path %></li>
+        <li><%= link_to "Companies", companies_path %></li>
+      </nav>
+    </div>
     <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
     <%= yield %>
