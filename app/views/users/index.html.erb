@@ -5,5 +5,6 @@
   <h4><%= user.company.try(:name) %></h4>
   <h5>Created at: <%= time_ago_in_words(user.created_at) %></h5>
   <h5>Updated at: <%= time_ago_in_words(user.updated_at) %></h5>
+  <%= link_to "Delete", user, method: :delete %>
   </div>
 <%end%>
