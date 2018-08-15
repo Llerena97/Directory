@@ -1,0 +1,8 @@
+<h1>Import contacts</h1>
+  <% unless @contacts.nil?%>
+    <% @contacts.each do |c|%>
+      <ul>
+        <li><%= c[:name]%> :  <%= c[:email] %> :  <%= c[:phone_number] %></li>
+      </ul> 
+    <% end %>
+  <% end %>
