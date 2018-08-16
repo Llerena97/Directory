@@ -19,6 +19,8 @@ gem 'devise'
 
 gem 'omniauth-google-oauth2'
 
+gem 'omniauth-facebook'
+
 gem 'omnicontacts'
 
 gem 'dotenv-rails', groups: [:development, :test]
